@@ -5,3 +5,55 @@ h1{
     font-weight: bold;
     color: red;
 }
+$fz-color:#3B3B3B;
+$tag-bg-color:#F1F1F1;
+.container{
+    width: 1296px;
+    margin: 0 auto;
+    .portfolios{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap:24px;
+        .imgs{
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .intro{
+            margin-left: 16px;
+            margin-bottom: 24px;
+            h3{
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 33.6px;
+                color:$fz-color;
+                margin-top: 16px;
+                margin-bottom: 8px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color:#919191;
+            }
+        }
+        
+        .tags{
+            margin-left: 16px;
+            a{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-decoration: none;
+                color:$fz-color;
+                background-color:$tag-bg-color;
+                padding: 4px 12px;
+                border-radius: 16px;
+                margin-right: 16px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
