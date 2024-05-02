@@ -24,7 +24,6 @@ h1 {
   gap: 24px;
 }
 .container .portfolios .imgs {
-  border: 1px solid black;
   border-radius: 8px;
   overflow: hidden;
 }
