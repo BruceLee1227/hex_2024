@@ -1,5 +1,4 @@
 @import "_reset.scss";
-
 h1{
     font-size: 32px;
     font-weight: bold;
@@ -16,7 +15,8 @@ $tag-bg-color:#F1F1F1;
         flex-wrap: wrap;
         gap:24px;
         .imgs{
-            border-radius: 20px;
+            border: 1px solid black;
+            border-radius: 8px;
             overflow: hidden;
         }
         .intro{
