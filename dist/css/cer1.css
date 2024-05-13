@@ -7,6 +7,10 @@
   font-family: Noto Sans;
 }
 
+body {
+  font-family: "Noto Sans TC", "Noto Sans", sans-serif;
+}
+
 h1 {
   font-size: 32px;
   font-weight: bold;
