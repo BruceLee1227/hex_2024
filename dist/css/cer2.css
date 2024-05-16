@@ -7,7 +7,33 @@
   font-family: Noto Sans;
 }
 
-h1 {
-  font-size: 56px;
-  color: green;
+* {
+  position: relative;
+  border: 1px solid black;
+}
+
+.header .container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 32px 0;
+}
+.header img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .menu {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.header .menu a {
+  text-decoration: none;
 }
