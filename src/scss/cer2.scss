@@ -2,9 +2,9 @@
 // *{
 //     border:1px solid black;
 // }
-@import "variable";
+@import "_variable";
 .header{
-    position: sticky;
+    // position: sticky;
     z-index: 999;
     top: 0;
     background-color: $color_white;
@@ -13,7 +13,7 @@
     .container{
         width: 100%;
         max-width: 1296px;
-        margin: 0 auto;
+        margin: auto;
         position: relative;
         padding: 32px;
         .logo{
@@ -35,16 +35,14 @@
     }
 }
 .works{
-    height: 100vh;
+    height: auto;
     .container{
         width: 1296px;
         margin: 0 auto;
-    }
-    .wrapper{
+        display: flex;
         >div{
             width: 50%;
         }
-        display: flex;
     }
     &-text{
         display: flex;
@@ -72,6 +70,35 @@
         ul{
             display: flex;
             gap: 16px;
+        }
+    }
+}
+.portfolio{
+    height: 100vh;
+    background-color: red;
+    &-title{
+        padding: 120px 0;
+        display: flex;
+        justify-content: center;
+        background-color: $color_white;
+        position: relative;
+        h2{
+            font-size: 32px;
+        }
+        .deco{
+            position: absolute;
+            top: 50%;
+        }
+        .left{
+            left: 80px;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+        .right{
+            bottom: 0;
+            top: 0;
+            margin: auto;
         }
     }
 }

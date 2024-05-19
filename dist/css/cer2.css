@@ -16,7 +16,6 @@ a {
 }
 
 .header {
-  position: sticky;
   z-index: 999;
   top: 0;
   background-color: #ffffff;
@@ -25,7 +24,7 @@ a {
 .header .container {
   width: 100%;
   max-width: 1296px;
-  margin: 0 auto;
+  margin: auto;
   position: relative;
   padding: 32px;
 }
@@ -47,16 +46,14 @@ a {
 }
 
 .works {
-  height: 100vh;
+  height: auto;
 }
 .works .container {
   width: 1296px;
   margin: 0 auto;
-}
-.works .wrapper {
   display: flex;
 }
-.works .wrapper > div {
+.works .container > div {
   width: 50%;
 }
 .works-text {
@@ -86,4 +83,34 @@ a {
 .works-socials ul {
   display: flex;
   gap: 16px;
+}
+
+.portfolio {
+  height: 100vh;
+  background-color: red;
+}
+.portfolio-title {
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  position: relative;
+}
+.portfolio-title h2 {
+  font-size: 32px;
+}
+.portfolio-title .deco {
+  position: absolute;
+  top: 50%;
+}
+.portfolio-title .left {
+  left: 80px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+.portfolio-title .right {
+  bottom: 0;
+  top: 0;
+  margin: auto;
 }
