@@ -1,7 +1,7 @@
 @import "_reset.scss";
-// *{
-//     border:1px solid black;
-// }
+*{
+    border:1px solid black;
+}
 @import "_variable";
 .header{
     // position: sticky;
@@ -36,18 +36,12 @@
 }
 .works{
     height: auto;
-    .container{
-        width: 1296px;
-        margin: 0 auto;
-        display: flex;
-        >div{
-            width: 50%;
-        }
-    }
+    @include df;
     &-text{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-left: 1.5rem;
         h2{
             font-size: 40px;
             line-height: 48px;
@@ -74,31 +68,25 @@
     }
 }
 .portfolio{
-    height: 100vh;
+    // height: 100vh;
     background-color: red;
     &-title{
-        padding: 120px 0;
-        display: flex;
-        justify-content: center;
+        img{
+            height: 6px;
+        }
+        @include df;
         background-color: $color_white;
-        position: relative;
+        padding-top: 120px;
+        padding-bottom: 80px;
         h2{
             font-size: 32px;
         }
-        .deco{
-            position: absolute;
-            top: 50%;
-        }
-        .left{
-            left: 80px;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-        }
-        .right{
-            bottom: 0;
-            top: 0;
-            margin: auto;
-        }
+    }
+    &-1{
+        background-image: url(/imgs/homepage-work1-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 800px;
+        @include df;
     }
 }

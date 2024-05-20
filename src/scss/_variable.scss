@@ -1,2 +1,9 @@
 $color_white: #ffffff;
 $color_gray: #c1c1c1;
+
+// Flex 置中
+@mixin df{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
