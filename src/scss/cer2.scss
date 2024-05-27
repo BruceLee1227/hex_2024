@@ -1,7 +1,7 @@
 @import "_reset.scss";
-*{
-    border:1px solid black;
-}
+// *{
+//     border:1px solid black;
+// }
 @import "_variable";
 .header{
     // position: sticky;
@@ -68,7 +68,6 @@
     }
 }
 .portfolio{
-    // height: 100vh;
     background-color: red;
     &-title{
         img{
@@ -82,11 +81,49 @@
             font-size: 32px;
         }
     }
-    &-1{
-        background-image: url(/imgs/homepage-work1-bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 800px;
-        @include df;
+    .container{
+        width: 1296px;
+        margin: 0 auto;
     }
+    &-book{
+        background-image: url(../imgs/homepage-work1-bg.png);
+        @include bg;
+        img{
+            @include img;
+        }
+        &-content{
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            // min-height: 100vh;
+        }
+        .content-wrap{
+            display: flex;
+            width: 100%;
+            >div{
+                width: 50%;
+            }
+        }
+        .text{
+            background: rgba(211, 209, 209, 0.9);
+        }
+    }
+    // .text{
+    //     background-color: rgba($color_white,0.9);
+    // }
+    // &-finance{
+    //     background-image: url(../imgs/homepage-work2-lg.png);
+    //     @include bg;
+    // }
+    // &-aesthetic{
+    //     background-image: url(../imgs/homepage-work3-bg.png);
+    //     @include bg;
+    //     >div{
+    //         width: 50%;
+    //     }
+    //     img{
+    //         @include img;
+    //     }
+    // }
 }

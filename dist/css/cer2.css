@@ -15,10 +15,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  border: 1px solid black;
-}
-
 .header {
   z-index: 999;
   top: 0;
@@ -102,12 +98,33 @@ a {
 .portfolio-title h2 {
   font-size: 32px;
 }
-.portfolio-1 {
-  background-image: url(/imgs/homepage-work1-bg.png);
-  background-size: cover;
+.portfolio .container {
+  width: 1296px;
+  margin: 0 auto;
+}
+.portfolio-book {
+  background-image: url(../imgs/homepage-work1-bg.png);
   background-repeat: no-repeat;
-  height: 800px;
+  background-size: cover;
+}
+.portfolio-book img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.portfolio-book-content {
   display: flex;
-  justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.portfolio-book .content-wrap {
+  display: flex;
+  width: 100%;
+}
+.portfolio-book .content-wrap > div {
+  width: 50%;
+}
+.portfolio-book .text {
+  background: rgba(211, 209, 209, 0.9);
 }

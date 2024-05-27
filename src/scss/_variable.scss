@@ -7,3 +7,14 @@ $color_gray: #c1c1c1;
     justify-content: center;
     align-items: center;
 }
+// 背景圖片設定
+@mixin bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+// 圖片處理
+@mixin img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
