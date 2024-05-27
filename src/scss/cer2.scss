@@ -1,7 +1,7 @@
 @import "_reset.scss";
-// *{
-//     border:1px solid black;
-// }
+*{
+    border:1px solid red;
+}
 @import "_variable";
 .header{
     // position: sticky;
@@ -36,11 +36,12 @@
 }
 .works{
     height: auto;
-    @include df;
+    display: flex;
+    justify-content: space-between;
     &-text{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content:center;
         padding-left: 1.5rem;
         h2{
             font-size: 40px;
@@ -88,6 +89,7 @@
     &-book{
         background-image: url(../imgs/homepage-work1-bg.png);
         @include bg;
+        
         img{
             @include img;
         }
@@ -105,25 +107,57 @@
                 width: 50%;
             }
         }
-        .text{
-            background: rgba(211, 209, 209, 0.9);
+    }
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-content{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 24px;
+        }
+        .intro{
+            h2{
+                color: $color_white;
+                font-size: 28px;
+                line-height: 33.6px;
+                font-weight: 700;
+            }
+            p{
+                color:$color_white;
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                margin-bottom: 24px;
+            }
+            .tags{
+                display: flex;
+                justify-content: flex-start;
+                gap: 8px;
+                color:$color_black;
+                margin-bottom: 40px;
+                li{
+                    background-color: $color_white;
+                    padding: 4px 12px;
+                    border-radius: 16px;
+                }
+            }
+            hr{
+                margin-bottom: 40px;
+            }
+            .btn{
+                background-color: $color_black;
+                a{
+                    display: block;
+                    color: $color_white;
+                    text-align: center;
+                }
+            }
         }
     }
-    // .text{
-    //     background-color: rgba($color_white,0.9);
-    // }
-    // &-finance{
-    //     background-image: url(../imgs/homepage-work2-lg.png);
-    //     @include bg;
-    // }
-    // &-aesthetic{
-    //     background-image: url(../imgs/homepage-work3-bg.png);
-    //     @include bg;
-    //     >div{
-    //         width: 50%;
-    //     }
-    //     img{
-    //         @include img;
-    //     }
-    // }
 }

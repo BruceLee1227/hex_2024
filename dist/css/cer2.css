@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+* {
+  border: 1px solid red;
+}
+
 .header {
   z-index: 999;
   top: 0;
@@ -48,8 +52,7 @@ a {
 .works {
   height: auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 .works-text {
   display: flex;
@@ -125,6 +128,53 @@ a {
 .portfolio-book .content-wrap > div {
   width: 50%;
 }
-.portfolio-book .text {
-  background: rgba(211, 209, 209, 0.9);
+.portfolio .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio .text-content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+}
+.portfolio .text .intro h2 {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 33.6px;
+  font-weight: 700;
+}
+.portfolio .text .intro p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.portfolio .text .intro .tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  color: #3b3b3b;
+  margin-bottom: 40px;
+}
+.portfolio .text .intro .tags li {
+  background-color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+.portfolio .text .intro hr {
+  margin-bottom: 40px;
+}
+.portfolio .text .intro .btn {
+  background-color: #3b3b3b;
+}
+.portfolio .text .intro .btn a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
 }
