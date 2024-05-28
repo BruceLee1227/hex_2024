@@ -15,10 +15,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  border: 1px solid red;
-}
-
 .header {
   z-index: 999;
   top: 0;
@@ -84,9 +80,6 @@ a {
   gap: 16px;
 }
 
-.portfolio {
-  background-color: red;
-}
 .portfolio-title {
   display: flex;
   justify-content: center;
@@ -109,37 +102,99 @@ a {
   background-image: url(../imgs/homepage-work1-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+.portfolio-book-content {
+  display: flex;
+  gap: 55px;
 }
 .portfolio-book img {
   width: 100%;
   height: auto;
   display: block;
+  margin-top: 80px;
+  margin-bottom: 0;
 }
-.portfolio-book-content {
+.portfolio-book .bgc {
+  background-color: rgba(73, 69, 69, 0.197);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-aesthetic {
+  background-image: url(../imgs/homepage-work3-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+.portfolio-aesthetic-content {
   display: flex;
-  align-items: center;
+  gap: 55px;
+}
+.portfolio-aesthetic img {
+  width: 100%;
+  height: auto;
+  display: block;
   position: relative;
   z-index: 2;
+  margin-top: 80px;
 }
-.portfolio-book .content-wrap {
-  display: flex;
+.portfolio-aesthetic .bgc {
+  background-color: rgba(0, 0, 0, 0.177);
+  position: absolute;
+  top: 0;
+  z-index: 1;
   width: 100%;
+  height: 100%;
 }
-.portfolio-book .content-wrap > div {
+.portfolio-finance {
+  background-image: url(../imgs/homepage-work2-lg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.portfolio-finance-content {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+.portfolio-finance img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+  margin-top: 80px;
+}
+.portfolio-finance .bgc {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  z-index: 1;
   width: 50%;
+  height: 100%;
 }
 .portfolio .text {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2;
 }
 .portfolio .text-content {
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(152, 144, 198, 0.429);
   border-radius: 24px;
 }
 .portfolio .text .intro h2 {
@@ -161,20 +216,60 @@ a {
   gap: 8px;
   color: #3b3b3b;
   margin-bottom: 40px;
+  font-size: 16px;
 }
 .portfolio .text .intro .tags li {
   background-color: #ffffff;
   padding: 4px 12px;
   border-radius: 16px;
+  line-height: 24px;
 }
 .portfolio .text .intro hr {
   margin-bottom: 40px;
 }
 .portfolio .text .intro .btn {
-  background-color: #3b3b3b;
+  display: flex;
+  justify-content: center;
 }
-.portfolio .text .intro .btn a {
-  display: block;
+.portfolio .text .intro .btn-content {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+  padding: 16px 32px 16px 32px;
+}
+.portfolio .text .intro .btn-content a {
   color: #ffffff;
-  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+.portfolio .text .intro .btn .material-icons {
+  color: #ffffff;
+}
+
+.service {
+  background-image: url(../imgs/homepage-services-bg.png);
+}
+.service-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.service-title img {
+  height: 6px;
+}
+.service-title h2 {
+  font-size: 32px;
+}
+.service-items {
+  display: flex;
+  gap: 4px;
+}
+.service-items li {
+  background-color: black;
+  border-radius: 5px;
 }

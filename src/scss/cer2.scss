@@ -1,8 +1,8 @@
 @import "_reset.scss";
-*{
-    border:1px solid red;
-}
 @import "_variable";
+// *{
+//     border:1px solid red;
+// }
 .header{
     // position: sticky;
     z-index: 999;
@@ -34,6 +34,7 @@
         }
     }
 }
+// 經歷
 .works{
     height: auto;
     display: flex;
@@ -68,8 +69,9 @@
         }
     }
 }
+// 作品集
 .portfolio{
-    background-color: red;
+    // background-color: red;
     &-title{
         img{
             height: 6px;
@@ -81,6 +83,7 @@
         h2{
             font-size: 32px;
         }
+       
     }
     .container{
         width: 1296px;
@@ -89,36 +92,101 @@
     &-book{
         background-image: url(../imgs/homepage-work1-bg.png);
         @include bg;
-        
+        position: relative;
+        // min-height: 100vh;
+        &-content{
+            display: flex;
+            gap:55px;
+            // >div{
+            //     width: 50%;
+            // }
+        }
         img{
             @include img;
+            margin-top: 80px;
+            margin-bottom: 0;
         }
+        .bgc{
+            background-color:rgba(73, 69, 69, 0.197);
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-aesthetic{
+        background-image: url(../imgs/homepage-work3-bg.png);
+        @include bg;
+        position: relative;
+        min-height: 100vh;
+        &-content{
+            display: flex;
+            // justify-content: space-between;
+            gap:55px;
+            // >div{
+            //     width: 50%;
+            // }
+        }
+        img{
+            @include img;
+            position: relative;
+            z-index: 2;
+            margin-top: 80px;
+        }
+        .bgc{
+            background-color:rgba(0, 0, 0, 0.177);
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-finance{
+        background-image: url(../imgs/homepage-work2-lg.png);
+        @include bg;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
         &-content{
             display: flex;
             align-items: center;
+            gap:55px;
+            // >div{
+            //     width: 50%;
+            // }
+        }
+        img{
+            @include img;
             position: relative;
             z-index: 2;
-            // min-height: 100vh;
+            margin-top: 80px;
         }
-        .content-wrap{
-            display: flex;
-            width: 100%;
-            >div{
-                width: 50%;
-            }
+        .bgc{
+            background-color:rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
         }
     }
     .text{
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
+        position: relative;
+        z-index: 2;
         &-content{
+            width: 100%;
             height: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 40px;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(152, 144, 198, 0.429);
             border-radius: 24px;
         }
         .intro{
@@ -141,23 +209,61 @@
                 gap: 8px;
                 color:$color_black;
                 margin-bottom: 40px;
+                font-size: 16px;
                 li{
                     background-color: $color_white;
                     padding: 4px 12px;
                     border-radius: 16px;
+                    line-height: 24px;
                 }
             }
             hr{
                 margin-bottom: 40px;
             }
             .btn{
-                background-color: $color_black;
-                a{
-                    display: block;
+                display: flex;
+                justify-content: center;
+                &-content{
+                    display: flex;
+                    align-items: center;
+                    background-color: black;
+                    border-radius: 5px;
+                    padding: 16px 32px 16px 32px;
+                    a{
+                        color: $color_white;
+                        font-size: 20px;
+                        line-height: 30px;
+                        font-weight: 700;
+                    }
+                }
+                .material-icons{
                     color: $color_white;
-                    text-align: center;
                 }
             }
+        }
+    }
+}
+// 服務項目
+.service{
+    background-image: url(../imgs/homepage-services-bg.png);
+    &-title{
+        img{
+            height: 6px;
+        }
+        @include df;
+        background-color: $color_white;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        h2{
+            font-size: 32px;
+        }
+    }
+    &-items{
+        display: flex;
+        gap: 4px;
+        li{
+            background-color: black;
+            border-radius: 5px;
         }
     }
 }
