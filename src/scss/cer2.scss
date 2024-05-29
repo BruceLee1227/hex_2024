@@ -4,7 +4,8 @@
 //     border:1px solid red;
 // }
 .header{
-    // position: sticky;
+    position: fixed;
+    width: 100%;
     z-index: 999;
     top: 0;
     background-color: $color_white;
@@ -82,18 +83,14 @@
         padding-bottom: 80px;
         h2{
             font-size: 32px;
-        }
-       
+        }      
     }
-    .container{
-        width: 1296px;
-        margin: 0 auto;
-    }
+    
     &-book{
         background-image: url(../imgs/homepage-work1-bg.png);
         @include bg;
         position: relative;
-        // min-height: 100vh;
+        height:auto;
         &-content{
             display: flex;
             gap:55px;
@@ -106,7 +103,7 @@
             margin-top: 80px;
             margin-bottom: 0;
         }
-        .bgc{
+        .overlay{
             background-color:rgba(73, 69, 69, 0.197);
             position: absolute;
             top: 0;
@@ -119,7 +116,7 @@
         background-image: url(../imgs/homepage-work3-bg.png);
         @include bg;
         position: relative;
-        min-height: 100vh;
+        height: 100vh;
         &-content{
             display: flex;
             // justify-content: space-between;
@@ -134,7 +131,7 @@
             z-index: 2;
             margin-top: 80px;
         }
-        .bgc{
+        .overlay{
             background-color:rgba(0, 0, 0, 0.177);
             position: absolute;
             top: 0;
@@ -147,7 +144,7 @@
         background-image: url(../imgs/homepage-work2-lg.png);
         @include bg;
         position: relative;
-        min-height: 100vh;
+        height: 100vh;
         display: flex;
         align-items: center;
         &-content{
@@ -164,7 +161,7 @@
             z-index: 2;
             margin-top: 80px;
         }
-        .bgc{
+        .overlay{
             background-color:rgba(0, 0, 0, 0.4);
             position: absolute;
             top: 0;
@@ -260,10 +257,94 @@
     }
     &-items{
         display: flex;
+        justify-content: space-around;
         gap: 4px;
         li{
-            background-color: black;
-            border-radius: 5px;
+            width: 306px;
+            height: 306px;
+            padding: 20px 30px 20px 30px;
+            @include df;
+            flex-direction: column;
+            background: linear-gradient(to bottom right, #282828 50%, #000000 0);
+            color: white;
+            border-radius: 16px;
+        }
+        img{
+            margin-bottom: 24px;
         }
     }
+    &-content{
+        margin-top: 80px;
+        margin-bottom: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    p{
+        text-align: center;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 33.6px;
+        color: $color_black;
+        margin-bottom: 40px;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+        &-content{
+            display: flex;
+            align-items: center;
+            background-color: black;
+            border-radius: 5px;
+            padding: 16px 32px 16px 32px;
+            a{
+                color: $color_white;
+                font-size: 20px;
+                line-height: 30px;
+                font-weight: 700;
+            }
+        }
+        .material-icons{
+            color: $color_white;
+        }
+    }
+}
+// 文章
+.articles{
+    &-title{
+        img{
+            height: 6px;
+        }
+        @include df;
+        background-color: $color_white;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        h2{
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 38.4px;
+            letter-spacing: 12%;
+        }
+    }
+    .list{
+        display: flex;
+        justify-content: space-between;
+        li{
+            display: block;
+        }
+    }
+    .card{
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            display: block;
+        }
+    }
+}
+// 頁尾
+.footer{
+    height: 100vh;
+    background-image: url(../imgs/footer-bg-lg.png);
+    @include bg;
 }
