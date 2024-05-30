@@ -20,12 +20,18 @@ a {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .header {
   position: fixed;
   width: 100%;
   z-index: 999;
   top: 0;
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   border-bottom: 1px solid #f1f1f1;
 }
 .header .container {
@@ -53,6 +59,7 @@ a {
 }
 
 .works {
+  height: 100vh;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -91,7 +98,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   padding-top: 120px;
   padding-bottom: 80px;
 }
@@ -202,13 +208,13 @@ a {
   border-radius: 24px;
 }
 .portfolio .text .intro h2 {
-  color: #ffffff;
+  color: #f1f1f1;
   font-size: 28px;
   line-height: 33.6px;
   font-weight: 700;
 }
 .portfolio .text .intro p {
-  color: #ffffff;
+  color: #f1f1f1;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -223,7 +229,7 @@ a {
   font-size: 16px;
 }
 .portfolio .text .intro .tags li {
-  background-color: #ffffff;
+  background-color: #f1f1f1;
   padding: 4px 12px;
   border-radius: 16px;
   line-height: 24px;
@@ -234,22 +240,27 @@ a {
 .portfolio .text .intro .btn {
   display: flex;
   justify-content: center;
+  border: 0;
+  z-index: 50;
 }
 .portfolio .text .intro .btn-content {
   display: flex;
   align-items: center;
   background-color: black;
+  color: #f1f1f1;
   border-radius: 5px;
   padding: 16px 32px 16px 32px;
-}
-.portfolio .text .intro .btn-content a {
-  color: #ffffff;
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
+  border: 0;
+  cursor: pointer;
+}
+.portfolio .text .intro .btn-content:hover {
+  background-color: blue;
 }
 .portfolio .text .intro .btn .material-icons {
-  color: #ffffff;
+  color: #f1f1f1;
 }
 
 .service {
@@ -259,7 +270,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   padding-top: 120px;
   padding-bottom: 80px;
 }
@@ -317,20 +327,22 @@ a {
   padding: 16px 32px 16px 32px;
 }
 .service .btn-content a {
-  color: #ffffff;
+  color: #f1f1f1;
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
 }
 .service .btn .material-icons {
-  color: #ffffff;
+  color: #f1f1f1;
 }
 
+.articles {
+  height: 100vh;
+}
 .articles-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   padding-top: 120px;
   padding-bottom: 80px;
 }
@@ -345,22 +357,100 @@ a {
 }
 .articles .list {
   display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+.articles .list-img {
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.articles .list-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.articles .list-text {
+  padding: 0 8px;
+}
+.articles .list-text li {
+  font-weight: 400;
+  line-height: 24px;
+  padding: 4px 12px;
+}
+.articles .list-text h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.articles .list-text .tag {
+  display: flex;
   justify-content: space-between;
 }
-.articles .list li {
-  display: block;
-}
-.articles .card {
-  border-radius: 10px;
-  overflow: hidden;
-}
-.articles .card img {
-  display: block;
+.articles .list-text .deco {
+  background-color: #f1f1f1;
+  border-radius: 16px;
 }
 
 .footer {
-  height: 100vh;
   background-image: url(../imgs/footer-bg-lg.png);
+  padding-top: 80px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.footer .contect {
+  padding: 20px;
+  line-height: 30px;
+  font-weight: 400;
+}
+.footer .contect img, .footer .contect p {
+  margin-bottom: 24px;
+}
+.footer .contect p {
+  font-weight: 400;
+}
+.footer .contect span {
+  color: rgba(60, 59, 59, 0.4);
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .socials {
+  display: flex;
+  flex-direction: column;
+}
+.footer .socials .content-wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+.footer .socials .black {
+  background-color: black;
+  color: #f1f1f1;
+}
+.footer .socials-content {
+  width: 306px;
+  height: 72px;
+  background-color: #f1f1f1;
+  margin-bottom: 24px;
+  font-size: 20px;
+  border: 1px solid #c1c1c1;
+  border-radius: 8px;
+  padding: 8px 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .header .menu {
+    display: none;
+  }
+  .header .button {
+    display: block;
+  }
 }

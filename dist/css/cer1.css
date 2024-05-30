@@ -20,6 +20,12 @@ a {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 body {
   font-family: "Noto Sans TC", "Noto Sans", sans-serif;
 }
