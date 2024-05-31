@@ -4,46 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>證書任務二</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/cer2.css">
 </head>
 <body>
     <!-- 頁首 -->
     <div class="header">
-        <div class="container">        
+        <div class="container header-inner">
             <a href="#" class="logo">
                 <img src="imgs/logo.svg" alt="">
             </a>
-            <ul class="menu">
+            <!-- RWD按鍵 -->
+            <input type="checkbox" id="menu-control" class="menu-control">
+            <label for="menu-control" class="menu-btn">
+                <img src="imgs/menu.svg" alt="menu-btn">
+            </label>
+            <ul class="menu ">
                 <li><a href="#">首頁</a></li>
                 <li><a href="#">作品集</a></li>
                 <li><a href="#">服務項目</a></li>
                 <li><a href="#">部落格</a></li>
                 <li><a href="#">聯絡我</a></li>
             </ul>
-            <button class="button">
-                <img src="imgs/menu.svg" alt="open-menu">
-            </button>
         </div>
     </div>
     <!-- 經歷 -->
     <div class="works">
-        <div class="works-text">
-            <h2>Hi！我是 Noel</h2>
-            <p>具有 10 年經驗的 資深 UI 設計師標題裝飾  兼  前端工程師標題裝飾
-                技術雙修並行，熱衷於優化使用者的網頁體驗
-            </p>
-            <span>WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN</span>
-            <div class="works-socials">
-                <ul>
-                    <li><a href="#"><img src="imgs/instagram.svg" alt="instagram"></a></li>
-                    <li><a href="#"><img src="imgs/facebook.svg" alt="facebook"></a></li>
-                    <li><a href="#"><img src="imgs/youtube.svg" alt="youtube"></a></li>
-                </ul>
+        <div class="container">
+            <div class="container-wrap">
+                <div class="works-text">
+                    <div class="text-content">
+                        <h2>Hi！我是 Noel</h2>
+                        <p>具有10年經驗的資深UI設計師標題裝飾兼前端工程師標題裝飾
+                            技術雙修並行，熱衷於優化使用者的網頁體驗
+                        </p>
+                        <span>WEB DEVELOPMENT / BRANDING / UI / UX / APP DESIGN</span>
+                        <div class="works-socials">
+                            <ul>
+                                <li><a href="#"><img src="imgs/instagram.svg" alt="instagram"></a></li>
+                                <li><a href="#"><img src="imgs/facebook.svg" alt="facebook"></a></li>
+                                <li><a href="#"><img src="imgs/youtube.svg" alt="youtube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="works-img">
+                    <img src="imgs/hero-lg.png" alt="">
+                </div>
             </div>
-        </div>
-        <div class="works-img">
-            <img src="imgs/hero-lg.png" alt="">
         </div>
     </div>
     <!-- 作品集 -->
@@ -58,33 +68,36 @@
         <!-- 作品集 訂票系統 -->
         <div class="portfolio-book">
             <div class="container">
-                <div class="portfolio-book-content">
-                    <div class="img">
-                        <img src="imgs/homepage-work1.png" alt="">
-                    </div>
-                    <div class="text">
-                        <div class="text-content">
-                            <div class="intro">
-                                <h2>星際旅行訂票平台</h2>
-                                <p>悠遊宇宙的夢想，從這裡開始實現</p>
-                                <ul class="tags">
-                                    <li>網頁設計</li>
-                                    <li>響應式設計</li>
-                                    <li>Bootstrap</li>
-                                </ul>
-                                <hr>
-                                <div class="btn">
-                                    <button class="btn-content">
-                                        完整介紹
-                                        <span class="material-icons">arrow_forward</span>
-                                    </button>
+                <div class="container-wrap">
+                    <div class="portfolio-book-content">
+                        <div class="img">
+                            <img src="imgs/homepage-work1.png" alt="">
+                        </div>
+                        <div class="text">
+                            <div class="text-content">
+                                <div class="intro">
+                                    <h2>星際旅行訂票平台</h2>
+                                    <p>悠遊宇宙的夢想，從這裡開始實現</p>
+                                    <ul class="tags">
+                                        <li>網頁設計</li>
+                                        <li>響應式設計</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                    <hr>
+                                    <div class="btn">
+                                        <button class="btn-content">
+                                            完整介紹
+                                            <span class="material-icons">arrow_forward</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
-            <div class="overlay"></div>
+            <!-- <div class="overlay"></div> -->
         </div>
         <!-- 作品集 理財APP -->
         <div class="portfolio-finance">

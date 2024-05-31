@@ -1,10 +1,41 @@
-@media screen and (max-width:720px) {
-    .header{
-        .menu{
-            display: none;
-        }
-        .button{
+@media screen and (max-width:992px){
+  .header-inner{
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
+    .logo{
+        margin-right: 0;
+    }
+    .menu{
+        display: none;
+        &-btn{
             display: block;
         }
     }
+    .menu-control:checked~.menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+  }
+  .works{
+    .container-wrap{
+        flex-direction: column;
+    }
+    &-text{
+        margin-bottom: 8px;
+    }
+    .text-content{
+        align-items: center;
+        flex-wrap: wrap;
+    }
+  }
+  .portfolio{
+    &-book, &-aesthetic{
+        &-content{
+            flex-direction: column;
+        }
+    }
+  }  
 }
