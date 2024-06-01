@@ -110,16 +110,15 @@ body {
   display: flex;
   width: 100%;
 }
+.portfolio .container-wrap > div {
+  width: 50%;
+}
 .portfolio-book {
   background-image: url(../imgs/homepage-work1-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: auto;
-}
-.portfolio-book-content {
-  display: flex;
-  gap: 55px;
+  height: 100vh;
 }
 .portfolio-book img {
   width: 100%;
@@ -127,6 +126,9 @@ body {
   display: block;
   margin-top: 80px;
   margin-bottom: 0;
+}
+.portfolio-book .text {
+  margin-left: 55px;
 }
 .portfolio-book .overlay {
   background-color: rgba(73, 69, 69, 0.197);
@@ -143,9 +145,8 @@ body {
   position: relative;
   height: 100vh;
 }
-.portfolio-aesthetic-content {
-  display: flex;
-  gap: 55px;
+.portfolio-aesthetic .text {
+  margin-left: 49px;
 }
 .portfolio-aesthetic img {
   width: 100%;
@@ -155,27 +156,20 @@ body {
   z-index: 2;
   margin-top: 80px;
 }
-.portfolio-aesthetic .overlay {
-  background-color: rgba(0, 0, 0, 0.177);
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
 .portfolio-finance {
   background-image: url(../imgs/homepage-work2-lg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   height: 100vh;
-  display: flex;
-  align-items: center;
 }
-.portfolio-finance-content {
+.portfolio-finance .container-wrap, .portfolio-finance .container, .portfolio-finance .wrapper {
+  height: 100%;
+}
+.portfolio-finance .wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 55px;
 }
 .portfolio-finance img {
   width: 100%;
