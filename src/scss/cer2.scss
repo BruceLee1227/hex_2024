@@ -96,7 +96,7 @@ body{
         background-image: url(../imgs/homepage-work1-bg.png);
         @include bg;
         position: relative;
-        height: 100vh;
+        height: 100%;
         img{
             @include img;
             margin-top: 80px;
@@ -118,7 +118,8 @@ body{
         background-image: url(../imgs/homepage-work3-bg.png);
         @include bg;
         position: relative;
-        height: 100vh;
+        height: 100%;
+        margin-bottom: 20px;
         .text{
             margin-left: 49px;
         }
@@ -134,7 +135,7 @@ body{
         background-image: url(../imgs/homepage-work2-lg.png);
         @include bg;
         position: relative;
-        height: 100vh;
+        height: 100%;
         .container-wrap,.container,.wrapper{
             height: 100%;
         }
@@ -304,7 +305,6 @@ body{
 }
 // 文章
 .articles{
-    height: 100vh;
     &-title{
         img{
             height: 6px;
@@ -360,10 +360,9 @@ body{
 }
 // 頁尾
 .footer{
-    // height: 100vh;
     background-image: url(../imgs/footer-bg-lg.png);
-    padding-top: 80px;
     @include bg;
+    padding-top: 80px;
     .contect{
         padding: 20px;
         line-height: 30px;

@@ -32,10 +32,40 @@
     }
   }
   .portfolio{
-    &-book, &-aesthetic{
-        &-content{
-            flex-direction: column;
+    .container-wrap{
+        flex-wrap: wrap;
+    }
+    .img, .text{
+        width: 100%;
+    }
+  }
+  .service{
+    &-items{
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    &-content{
+        a{
+            font-size: 16px;
+        }
+        p{
+            font-size: 20px;
         }
     }
-  }  
+  }
+  .articles{
+    .list{
+        flex-direction: column;
+        padding: 16px;
+    }
+  }
+  .footer{
+    &-content{
+        flex-direction: column;
+    }
+    .contect{
+        margin-bottom: 40px;
+    }
+  }
 }
