@@ -85,28 +85,28 @@ body{
             font-size: 32px;
         }      
     }
-    .container-wrap{
+    .container{
         display: flex;
-        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
         >div{
             width: 50%;
+            margin-right: 50px;
         }
     }
+    .portfolio-book, .portfolio-finance, .portfolio-aesthetic{
+        position: relative;
+        height: 800px;
+    }   
     &-book{
         background-image: url(../imgs/homepage-work1-bg.png);
         @include bg;
-        position: relative;
-        height: 100%;
         img{
             @include img;
-            margin-top: 80px;
-            margin-bottom: 0;
-        }
-        .text{
-            margin-left: 55px;
         }
         .overlay{
-            background-color:rgba(73, 69, 69, 0.197);
+            background-color:rgba(123, 99, 99, 0.197);
             position: absolute;
             top: 0;
             z-index: 1;
@@ -117,38 +117,26 @@ body{
     &-aesthetic{
         background-image: url(../imgs/homepage-work3-bg.png);
         @include bg;
-        position: relative;
-        height: 100%;
-        margin-bottom: 20px;
-        .text{
-            margin-left: 49px;
-        }
         img{
             @include img;
             position: relative;
             z-index: 2;
             margin-top: 80px;
         }
-
+        .overlay{
+            background-color:rgba(123, 99, 99, 0.197);
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
     }
     &-finance{
         background-image: url(../imgs/homepage-work2-lg.png);
         @include bg;
-        position: relative;
-        height: 100%;
-        .container-wrap,.container,.wrapper{
-            height: 100%;
-        }
-        .wrapper{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        img{
-            @include img;
-            position: relative;
-            z-index: 2;
-            margin-top: 80px;
+        .container{
+            flex-direction: row-reverse;
         }
         .overlay{
             background-color:rgba(0, 0, 0, 0.4);
@@ -165,6 +153,7 @@ body{
         justify-content: space-around;
         position: relative;
         z-index: 2;
+        // margin-left: 55px;
         &-content{
             width: 100%;
             height: auto;

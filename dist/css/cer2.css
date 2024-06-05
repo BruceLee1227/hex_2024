@@ -106,32 +106,32 @@ body {
 .portfolio-title h2 {
   font-size: 32px;
 }
-.portfolio .container-wrap {
+.portfolio .container {
   display: flex;
-  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
-.portfolio .container-wrap > div {
+.portfolio .container > div {
   width: 50%;
+  margin-right: 50px;
+}
+.portfolio .portfolio-book, .portfolio .portfolio-finance, .portfolio .portfolio-aesthetic {
+  position: relative;
+  height: 800px;
 }
 .portfolio-book {
   background-image: url(../imgs/homepage-work1-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  height: 100%;
 }
 .portfolio-book img {
   width: 100%;
   height: auto;
   display: block;
-  margin-top: 80px;
-  margin-bottom: 0;
-}
-.portfolio-book .text {
-  margin-left: 55px;
 }
 .portfolio-book .overlay {
-  background-color: rgba(73, 69, 69, 0.197);
+  background-color: rgba(123, 99, 99, 0.197);
   position: absolute;
   top: 0;
   z-index: 1;
@@ -142,12 +142,6 @@ body {
   background-image: url(../imgs/homepage-work3-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  height: 100%;
-  margin-bottom: 20px;
-}
-.portfolio-aesthetic .text {
-  margin-left: 49px;
 }
 .portfolio-aesthetic img {
   width: 100%;
@@ -157,28 +151,21 @@ body {
   z-index: 2;
   margin-top: 80px;
 }
+.portfolio-aesthetic .overlay {
+  background-color: rgba(123, 99, 99, 0.197);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
 .portfolio-finance {
   background-image: url(../imgs/homepage-work2-lg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  height: 100%;
 }
-.portfolio-finance .container-wrap, .portfolio-finance .container, .portfolio-finance .wrapper {
-  height: 100%;
-}
-.portfolio-finance .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.portfolio-finance img {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 2;
-  margin-top: 80px;
+.portfolio-finance .container {
+  flex-direction: row-reverse;
 }
 .portfolio-finance .overlay {
   background-color: rgba(0, 0, 0, 0.4);
@@ -444,8 +431,6 @@ body {
 @media screen and (max-width: 992px) {
   .header-inner {
     justify-content: space-between;
-    padding-left: 12px;
-    padding-right: 12px;
   }
   .header-inner .logo {
     margin-right: 0;
@@ -472,12 +457,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
   }
-  .portfolio .container-wrap {
-    flex-wrap: wrap;
-  }
-  .portfolio .img, .portfolio .text {
-    width: 100%;
-  }
   .service-items {
     flex-direction: column;
     align-items: center;
@@ -488,6 +467,35 @@ body {
   }
   .service-content p {
     font-size: 20px;
+  }
+  .portfolio .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio .container .text {
+    width: 100%;
+    bottom: 0;
+    margin-right: 0;
+  }
+  .portfolio .container .text-content {
+    border-radius: 0;
+    background-color: #fff;
+    align-items: center;
+  }
+  .portfolio .container .text-content h2 {
+    color: black;
+    text-align: center;
+  }
+  .portfolio .container .text-content p {
+    color: #c1c1c1;
+    text-align: center;
+  }
+  .portfolio .container .text .tags {
+    justify-content: space-around;
+  }
+  .portfolio-finance .overlay {
+    width: 0%;
+    height: 0%;
   }
   .articles .list {
     flex-direction: column;
